@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Table</title>
+</head>
+<body>
+    <h1>Django task</h1>
+    <h2>Proworktree Professional Services Private Limited.</h2>
+    <hr>
+    <center>
+    <form method="POST">
+        {%csrf_token%}
+        <select name="showrecords">
+            <option disabled selected="true">-- Select --</option>
+            <option >3</option>
+            <option >5</option>
+            <option >6</option>
+            <option >8</option>
+            <option >10</option>
+        </select>
+        <button type="submit">Show records</button>
+    <table border="1">
+        <tr>
+            <th>student_id</th>
+            <th>student_name</th>
+            <th>gender</th>
+        </tr>
+        {% for i in show %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.gender }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+    </center>
+   <p> USE:
+            when you have a large list of names and you only want names upto a particular no you can use this model.
+   </p>
+
+</body>
+</html>
