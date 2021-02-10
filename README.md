@@ -1,3 +1,3 @@
-# Simple-django-proj
+# Simple-django-proj for intern
 
-    simple task for intern
+    
